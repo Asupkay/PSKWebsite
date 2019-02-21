@@ -10,7 +10,7 @@ const renderBrothers = (pledgeClass) => {
 
 const PledgeClass = (props) => {
   return (
-    <Segment key = {props.pledgeClassName}> 
+    <Segment style={{height: '215px'}} key = {props.pledgeClassName}> 
       <Header as='h2'>{props.pledgeClassName}</Header> 
       <List horizontal>{ renderBrothers(props.pledgeClass) }</List>
     </Segment>
