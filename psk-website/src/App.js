@@ -7,6 +7,7 @@ import Alumni from './pages/alumni';
 import Recruitment from './pages/recruitment';
 import Contact from './pages/contact';
 import NavBar from './components/navBar';
+import { Container } from 'semantic-ui-react'
 import './App.css';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div className='App'>
         <NavBar/>
-        <div className='ui container'>
+        <Container>
           <Switch>
             <Route path='/home' component={Home} />
             <Route path='/brothers' component={Brothers} />
@@ -24,7 +25,7 @@ class App extends Component {
             <Route path='/contact' component={Contact} />
             <Redirect to='/home' />
           </Switch>
-        </div>
+        </Container>
       </div>
     );
   }
