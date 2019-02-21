@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Menu, Image } from 'semantic-ui-react';
 import pskLogo from '../psk-logo-white.svg';
 
 const bStyle ={ backgroundColor: '#c90e3a' };
 
 class NavBar extends Component {
- 
   state = { activeItem: 'Home' };
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
- 
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name });
+    console.log(this.props);
+    this.props.history.push(name);
+  };
 
-  render(props) {
+  render() {
+    console.log(this.props);
     const { activeItem } = this.state;
 
     return (
@@ -33,4 +37,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar
+export default withRouter(NavBar)
