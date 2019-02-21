@@ -5,13 +5,22 @@ import pskLogo from '../psk-logo-white.svg';
 
 const bStyle ={ backgroundColor: '#c90e3a' };
 
+const routeMap = {
+  'Who We Are': 'who',
+  'Home': 'home',
+  'Brothers': 'brothers',
+  'Alumni': 'alumni',
+  'Recruitment': 'recruitment',
+  'Contact': 'contact'
+}
+
 class NavBar extends Component {
   state = { activeItem: 'Home' };
 
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
     console.log(this.props);
-    this.props.history.push(name);
+    this.props.history.push(routeMap[name]);
   };
 
   render() {
