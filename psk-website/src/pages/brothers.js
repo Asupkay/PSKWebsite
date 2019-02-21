@@ -3,16 +3,15 @@ import { List, Header, Segment } from 'semantic-ui-react'
 
 
 const renderBrothers = (brothers) => {
-  console.log(brothers);
   return <React.Fragment> { 
     Object.keys(brothers).map(
-      (key) => <Segment> <Header as='h2'>{key}</Header> <List horizontal>{renderPeople(brothers[key])}</List></Segment>
+      (key) => <Segment key = {key}> <Header as='h2'>{key}</Header> <List horizontal>{renderPeople(brothers[key])}</List></Segment>
     ) 
   }</React.Fragment>
 }
 
 const renderPeople = (people) => {
-  return <React.Fragment> { people.map(person => <List.Item> { person } </List.Item>) } </React.Fragment>
+  return <React.Fragment> { people.map((person, index) => <List.Item key = { index }> { person } </List.Item>) } </React.Fragment>
 }
 
 class Brothers extends Component{

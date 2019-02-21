@@ -23,9 +23,9 @@ class NavBar extends Component {
   }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name });
-    console.log(this.props);
-    this.props.history.push(routeMap[name]);
+    const route = routeMap[name];
+    this.setState({ activeItem: `/${route}` });
+    this.props.history.push(route);
   };
 
   render() {
