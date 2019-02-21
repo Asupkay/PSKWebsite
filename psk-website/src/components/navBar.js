@@ -17,6 +17,11 @@ const routeMap = {
 class NavBar extends Component {
   state = { activeItem: 'Home' };
 
+  constructor(props) {
+    super(props);
+    this.state.activeItem = this.props.history.location.pathname;
+  }
+
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
     console.log(this.props);
@@ -24,7 +29,6 @@ class NavBar extends Component {
   };
 
   render() {
-    console.log(this.props);
     const { activeItem } = this.state;
 
     return (
@@ -35,12 +39,12 @@ class NavBar extends Component {
         <Menu.Item header>
           PHI SIGMA KAPPA
         </Menu.Item>
-        <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
-        <Menu.Item name='Who We Are' active={activeItem === 'Who We Are'} onClick={this.handleItemClick} />
-        <Menu.Item name='Brothers' active={activeItem === 'Brothers'} onClick={this.handleItemClick} />
-        <Menu.Item name='Alumni' active={activeItem === 'Alumni'} onClick={this.handleItemClick} />
-        <Menu.Item name='Recruitment' active={activeItem === 'Recruitment'} onClick={this.handleItemClick} />
-        <Menu.Item name='Contact' active={activeItem === 'Contact'} onClick={this.handleItemClick} />
+        <Menu.Item name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} />
+        <Menu.Item name='Who We Are' active={activeItem === '/who'} onClick={this.handleItemClick} />
+        <Menu.Item name='Brothers' active={activeItem === '/brothers'} onClick={this.handleItemClick} />
+        <Menu.Item name='Alumni' active={activeItem === '/alumni'} onClick={this.handleItemClick} />
+        <Menu.Item name='Recruitment' active={activeItem === '/recruitment'} onClick={this.handleItemClick} />
+        <Menu.Item name='Contact' active={activeItem === '/contact'} onClick={this.handleItemClick} />
       </Menu>
     );
   }
