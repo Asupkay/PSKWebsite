@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
-import { List, Header, Segment } from 'semantic-ui-react'
-
-
-const renderBrothers = (brothers) => {
-  return <React.Fragment> { 
-    Object.keys(brothers).map(
-      (key) => <Segment key = {key}> <Header as='h2'>{key}</Header> <List horizontal>{renderPeople(brothers[key])}</List></Segment>
-    ) 
-  }</React.Fragment>
-}
-
-const renderPeople = (people) => {
-  return <React.Fragment> { people.map((person, index) => <List.Item key = { index }> { person } </List.Item>) } </React.Fragment>
-}
+import Brotherhood from '../components/brotherhood'
 
 class Brothers extends Component{
 
   state = {
     brothers: {
       116: [
-        'Ben Reydel',
+        'Nicholas Bernier',
+        'Jacob Ciesielski',
+        'Ian Fan',
+        'Jason Farkas',
+        'Geoffrey Goldin',
         'Lior Idan',
+        'Matthew Morandi',
+        'Anthony Palandro',
+        'Anthony Picone',
+        'Ben Reydel',
+        'Henry Tapanes',
+        'Chris Zoubroulis'
       ],
       117: [
-        'Alex Supkay',
+        {
+          name: 'Alex Supkay',
+          major: 'Computer Science',
+          mugName: 'Not A Number',
+          gradYear: '2019'
+        },
         'Charlie Plate',
       ],
       118: [
@@ -33,14 +35,14 @@ class Brothers extends Component{
       119: [
         'Gary Fernicola',
         'Brandon Soong',
-      ]
+      ],
     }
   }
 
   render() {
     return (
       <React.Fragment>
-        { renderBrothers(this.state.brothers) }
+        <Brotherhood brotherhood={ this.state.brothers }/>
       </React.Fragment>
     );
   }
