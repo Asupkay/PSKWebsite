@@ -19,10 +19,7 @@ class App extends Component {
           <Switch>
             <Route path='/home' component={Home} />
             <Route path='/brothers' component={Brothers} />
-            <Route path='/who' component={WhoWeAre} />
             <Route path='/alumni' component={Alumni} />
-            <Route path='/recruitment' component={Recruitment} />
-            <Route path='/contact' component={Contact} />
             <Redirect to='/home' />
           </Switch>
         </Container>

@@ -40,11 +40,8 @@ class NavBar extends Component {
           PHI SIGMA KAPPA
         </Menu.Item>
         <Menu.Item name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} />
-        <Menu.Item name='Who We Are' active={activeItem === '/who'} onClick={this.handleItemClick} />
         <Menu.Item name='Brothers' active={activeItem === '/brothers'} onClick={this.handleItemClick} />
         <Menu.Item name='Alumni' active={activeItem === '/alumni'} onClick={this.handleItemClick} />
-        <Menu.Item name='Recruitment' active={activeItem === '/recruitment'} onClick={this.handleItemClick} />
-        <Menu.Item name='Contact' active={activeItem === '/contact'} onClick={this.handleItemClick} />
       </Menu>
     );
   }
