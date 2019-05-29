@@ -5,28 +5,7 @@ class Brothers extends Component{
 
   state = {
     brothers: {
-      116: [
-        'Nicholas Bernier',
-        'Jacob Ciesielski',
-        'Ian Fan',
-        'Jason Farkas',
-        'Geoffrey Goldin',
-        'Lior Idan',
-        'Matthew Morandi',
-        'Anthony Palandro',
-        'Anthony Picone',
-        'Ben Reydel',
-        'Henry Tapanes',
-        'Chris Zoubroulis'
-      ],
       117: [
-        {
-          name: 'Alex Supkay',
-          major: 'Computer Science',
-          mugName: 'Not A Number',
-          gradYear: '2019'
-        },
-        'Charlie Plate',
         'Tim Werder',
         'James Bond',
         'Colby Chaffin',
@@ -34,33 +13,28 @@ class Brothers extends Component{
         'Angelo Margiolas',
         'Anthony Baglino',
         'John Banya',
-        'Matthew Colozzo',
         'Greg Milani',
-        'Peter Oline',
         'Matt Roleke',
-        'Edward Wilkins Jr.',
       ],
       118: [
         'Pat Song',
         'William Kraemer',
-        'Kieran Joseph',
+        'Kiran Joseph',
         'Mithin Nair',
-        'Kuni Noubissi',
         'Derek Schwoyer',
         'Charles Attisani',
         'Emilio Domenech',
         'Karcsi Homoki',
-        'Alex Kahn',
         'Carmine Marchionda',
         'Aristide Muscariello',
         'Andy Nyugen',
-        'Lucas Payette',
+        'Lucas Payette'
       ],
       119: [
         'Gary Fernicola',
         'Brandon Soong',
         'Wyn Barnum',
-        'Ricard Bilotti',
+        'Richard Bilotti',
         'Anthony Ciccone',
         'Danny Collins',
         'Richard Dana',
@@ -78,11 +52,38 @@ class Brothers extends Component{
         'Alexander Saltstein',
         'Erik Schneider',
         'Ben Segall',
-        'Trent Slutzsky',
+        'Trent Slutzky',
         'Michael Steck',
         'Kit Touch-Phong',
-        'Adam Undus',
+        'Adam Undus'
       ],
+      120: [
+	'Matthew Bavoso',
+	'Michael Bellocchio',
+	'Ian Davis-Hoff',
+	'Zack Edwards',
+	'William Escamilla',
+	'Zachary Fazal',
+	'Charles Fee',
+	'Cole Felsher',
+	'Cosmo Gallaro',
+	'Evan Headley',
+	'Jared Kantor',
+	{
+	  name: 'Tim Leonard',
+	  major: 'Computer Science',
+	  mugName: 'Lying till Null',
+	 gradYear: '2021'
+	},
+	'James Margiotta',
+	'Jake Marshall',
+	'Aidan McEnroe',
+	'Jack Mork',
+	'Zachary Salisbury',
+	'Dylan Smith', 
+	'Francesco Sparacio',
+	'Edward Yaroslavsky'
+      ]
     }
   }
 
