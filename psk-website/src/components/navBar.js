@@ -33,9 +33,9 @@ class NavBar extends Component {
     //The home button is bold when unselected (font-weight 700) and goes to normal (400) when selected, idk why this happens
     return (
       <Menu inverted borderless style = { bStyle }>
-        <Menu.Item header name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} >
-          <Image src={pskLogo} className="ui mini image" alt="logo" />
-	   &nbsp;PHI SIGMA KAPPA 
+        <Menu.Item name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} >
+	  <Image src={pskLogo} className="ui mini image" alt="logo" />
+	  &nbsp;PHI SIGMA KAPPA 
 	</Menu.Item>
         <Menu.Item name='Brothers' active={activeItem === '/brothers'} onClick={this.handleItemClick} />
         <Menu.Item name='Alumni' active={activeItem === '/alumni'} onClick={this.handleItemClick} />
