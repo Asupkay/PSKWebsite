@@ -12,3 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* add responsive scrolling to lists of brothers, but it has to known when it overflows its parent ui.segment 
+div.ui.horizontal.list {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+*/
+

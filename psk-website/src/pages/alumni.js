@@ -5,6 +5,32 @@ class Alumni extends Component {
   
   state = {
     alumni: {
+      '2019 Graduates': [
+      	'Nicholas Bernier',
+	'Jacob Ciesielski',
+	'Ian Fan',
+        'Jason Farkas',
+        'Geoffrey Goldin',
+        'Lior Idan',
+        'Matthew Morandi',
+        'Anthony Palandro',
+        'Anthony Picone',
+        'Ben Reydel',
+        'Henry Tapanes',
+        'Chris Zoubroulis',
+        {
+          name: 'Alex Supkay',
+          major: 'Computer Science',
+          mugName: 'Not A Number',
+          gradYear: '2019'
+        },
+	'Charlie Plate',
+        'Matthew Colozzo',
+        'Peter Oline',
+        'Edward Wilkins Jr.',
+	'Kuni Noubissi',
+	'Alex Khan'
+      ],
       '2018 Graduates': [
         'Craig Cheng',
         'Jake Roccasecca',

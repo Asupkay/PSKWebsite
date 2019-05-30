@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Menu, Image } from 'semantic-ui-react';
 import pskLogo from '../psk-logo-white.svg';
 
-const bStyle ={ backgroundColor: '#c90e3a' };
+const bStyle ={ backgroundColor: '#c90e3a', borderRadius: 0 };
 
 const routeMap = {
   'Who We Are': 'who',
@@ -30,18 +30,17 @@ class NavBar extends Component {
 
   render() {
     const { activeItem } = this.state;
-
+    //The home button is bold when unselected (font-weight 700) and goes to normal (400) when selected, idk why this happens
     return (
       <Menu inverted borderless style = { bStyle }>
-        <Menu.Item>
-          <Image src={pskLogo} className="ui mini image" alt="logo" />
-        </Menu.Item>
-        <Menu.Item header>
-          PHI SIGMA KAPPA
-        </Menu.Item>
-        <Menu.Item name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} />
+        <Menu.Item name='Home' active={activeItem === '/home'} onClick={this.handleItemClick} >
+	  <Image src={pskLogo} className="ui mini image" alt="logo" />
+	  &nbsp;PHI SIGMA KAPPA 
+	</Menu.Item>
         <Menu.Item name='Brothers' active={activeItem === '/brothers'} onClick={this.handleItemClick} />
         <Menu.Item name='Alumni' active={activeItem === '/alumni'} onClick={this.handleItemClick} />
+        <Menu.Item name='Recruitment' active={activeItem === '/recruitment'} onClick={this.handleItemClick} />
+        <Menu.Item name='Contact' active={activeItem === '/contact'} onClick={this.handleItemClick} />
       </Menu>
     );
   }
